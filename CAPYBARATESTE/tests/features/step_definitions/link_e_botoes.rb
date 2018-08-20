@@ -1,7 +1,7 @@
 Quando("clico em botoes") do
     visit '/'
     # click_link_on_button são identicos
-    click_on('Começar Automação') 
+    click_on('Começar Automação Web') 
     
     visit '/buscaelementos/botoes'
     click_button(class:'btn waves-light')
