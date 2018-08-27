@@ -1,6 +1,18 @@
+ 
+# comentando o require acima e incluindo as riqueres:  'capybara/dsl',  'capybara/rspec/matchers' e
+# as worlds World(Capybara::DSL) World(Capybara::RSpecMatchers) 
+# o sistema não encerrar uma sessão para começar outra
+# require 'capybara/dsl'
+# require 'capybara/rspec/matchers'
 
+# World(Capybara::DSL)
+# World(Capybara::RSpecMatchers)
+require 'capybara'
 require 'capybara/cucumber'
 require 'selenium-webdriver'
+require 'site_prism'
+
+
 
 
 Capybara.configure do |config|
