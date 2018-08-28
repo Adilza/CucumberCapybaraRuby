@@ -2,11 +2,10 @@
 require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'site_prism'
-# require_relative 'page_helper.rb'
-  
+require_relative 'page_helper.rb'
 
-# World(PageObjects)
 
+World(PageObjetcs)
 Capybara.configure do |config|
   config.default_driver = :selenium_chrome
   config.app_host = 'https://automacaocombatista.herokuapp.com'
