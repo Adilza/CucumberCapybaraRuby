@@ -1,7 +1,7 @@
 #language: pt
 
-Funcionalidade: Cadastrar usuário.
+Funcionalidade: Cadastrar usuario.
 
-Cenário: Cadastrar usuário com sucesso.
-Quando eu cadastro um usuário
-Então eu verifico se o usuário foi cadastrado com sucesso.
+Cenario: Cadastrar usuario com sucesso.
+Quando eu cadastro um usuario
+Então eu verifico se o usuario foi cadastrado com sucesso.

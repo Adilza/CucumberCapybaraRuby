@@ -1,4 +1,4 @@
-Quando("eu cadastro um usuário") do
+Quando("eu cadastro um usuario") do
   user_page.load
   @user = OpenStruct.new
   @user.name = Faker::Name.name
@@ -9,6 +9,6 @@ Quando("eu cadastro um usuário") do
   user_page.criar_usuario(@user)
 end
 
-Então("eu verifico se o usuário foi cadastrado com sucesso.") do
+Então("eu verifico se o usuario foi cadastrado com sucesso.") do
   expect(user_page.mensagem.text).to eq 'Usuário Criado com sucesso'
 end

@@ -5,6 +5,7 @@ require 'selenium-webdriver'
 require 'site_prism'
 require 'ostruct'
 require_relative 'page_helper.rb'
+require_relative 'helper.rb'
 
 BROWSER = ENV['BROWSER']
 AMBIENTE = ENV['AMBIENTE'] 
@@ -12,6 +13,9 @@ AMBIENTE = ENV['AMBIENTE']
 CONFIG = YAML.load_file(File.dirname(__FILE__) + "/ambientes/#{AMBIENTE}.yml") 
 
 World(Pages)
+
+World(Helper) 
+# relatorio cucumber 
 
 
 Capybara.register_driver :selenium do |app|
@@ -30,9 +34,7 @@ elsif BROWSER.eql?('firefox')
 
 elsif BROWSER.eql?('firefox_headless')
   browser_options = Selenium::WebDriver::Firefox::Options.new(args: ['--headless'])
-  Capybara::Selenium::Driver.new(
-    app, :browser => :firefox,
-    options: browser_options)
+  Capybara::Selenium::Driver.new(app, :browser => :firefox, options: browser_options)
 #elsif BROWSER.eql?('ie')  
 #  Capybara::Selenium::Driver.new(app, :browser => :internet_explorer)
 #elsif BROWSER.eql?('safari')  
@@ -46,7 +48,7 @@ end
 
  
 Capybara.configure do |config|
-  config.default_driver = :selenium 
+  config.default_driver = :selenium  
   config.app_host = CONFIG['url_padrao']
   config.default_max_wait_time = 5
 end

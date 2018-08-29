@@ -1,6 +1,6 @@
 ---
 
-default: --profile pretty -p homolog -p firefox_headless
+default: --profile pretty -p homolog -p chrome_headless -p html
 
 pretty: --format pretty
 progress: --format progress
@@ -13,3 +13,6 @@ firefox_headless: BROWSER=firefox_headless
 #safari: BROWSER=safari
 #ie: BROWSER=ie
 #poltergeist:  BROWSER=poltergeist
+
+# relatorio cucumber 
+html: --format html --out=reports/relatorios.html
